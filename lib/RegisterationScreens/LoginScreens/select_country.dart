@@ -73,7 +73,9 @@ class _SelectCountryState extends State<SelectCountry> {
                   fieldname: "Search Here...",
                   iconpath: icon_search,
                   onChanged: (value) {
-                    countryProvider.searchCountry(value);
+                    setState(() {
+                      countryProvider.searchCountry(value);
+                    });
                   },
                 ),
                 SizedBox(height: displaysize.height * .01),
