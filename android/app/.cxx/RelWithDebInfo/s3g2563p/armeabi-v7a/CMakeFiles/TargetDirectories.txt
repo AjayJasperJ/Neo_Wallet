@@ -1,0 +1,2 @@
+/home/itzja5p3r/Documents/neo_pay/android/app/.cxx/RelWithDebInfo/s3g2563p/armeabi-v7a/CMakeFiles/edit_cache.dir
+/home/itzja5p3r/Documents/neo_pay/android/app/.cxx/RelWithDebInfo/s3g2563p/armeabi-v7a/CMakeFiles/rebuild_cache.dir

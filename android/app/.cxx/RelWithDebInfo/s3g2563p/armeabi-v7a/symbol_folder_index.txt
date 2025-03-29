@@ -1,0 +1,1 @@
+/home/itzja5p3r/Documents/neo_pay/build/app/intermediates/cxx/RelWithDebInfo/s3g2563p/obj/armeabi-v7a

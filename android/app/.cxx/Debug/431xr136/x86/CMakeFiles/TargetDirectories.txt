@@ -1,0 +1,2 @@
+/home/itzja5p3r/Documents/neo_pay/android/app/.cxx/Debug/431xr136/x86/CMakeFiles/edit_cache.dir
+/home/itzja5p3r/Documents/neo_pay/android/app/.cxx/Debug/431xr136/x86/CMakeFiles/rebuild_cache.dir
