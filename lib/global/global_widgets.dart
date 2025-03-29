@@ -24,9 +24,6 @@ class CustomBackButton extends StatelessWidget {
               onTap: () {
                 SystemChannels.textInput.invokeMethod('TextInput.hide');
                 context.read<GetAccountDetailsProvider>().updateamount('');
-                context
-                    .read<GetAccountDetailsProvider>()
-                    .updatebalance(context);
 
                 Navigator.pop(context);
               },
@@ -148,6 +145,7 @@ class CustomTextFormField1 extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         TextFormField(
+          textInputAction: TextInputAction.done,
           focusNode: focusnode,
           controller: controller,
           keyboardType: keyboardtype,
@@ -229,6 +227,7 @@ SizedBox CustomOTPField(
         }
       },
       child: TextFormField(
+        textInputAction: TextInputAction.done,
         controller: controller,
         focusNode: focusNode,
         style: CustomTextStyler()

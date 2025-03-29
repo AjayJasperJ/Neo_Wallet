@@ -85,6 +85,7 @@ class _LoginScreenState extends State<LoginScreen> {
                         .styler(size: .016, type: 'M', color: neo_theme_blue3)),
                 SizedBox(height: displaysize.height * .04),
                 TextFormField(
+                  textInputAction: TextInputAction.done,
                   controller: _contactController, // Attach controller
                   keyboardType: TextInputType.number,
                   inputFormatters: [
