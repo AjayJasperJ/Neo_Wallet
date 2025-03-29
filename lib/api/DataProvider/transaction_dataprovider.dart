@@ -54,6 +54,7 @@ class TransactionProvider with ChangeNotifier {
       required String receiverid,
       required String categoryID}) async {
     print('Fetching qr_payment API');
+    print('$amount $receiverid $categoryID');
     final prefs = await SharedPreferences.getInstance();
     final userId = prefs.getString('user_id');
     try {
@@ -64,12 +65,13 @@ class TransactionProvider with ChangeNotifier {
             'Content-Type': 'application/x-www-form-urlencoded'
           },
           body: {
-            'user_id': userId,
-            'amount': amount,
-            'receiver_id': receiverid,
-            'category_id': categoryID
+            'user_id': userId.toString(),
+            'amount': amount.toString(),
+            'receiver_id': receiverid.toString(),
+            'category_id': categoryID.toString()
           });
       final extract = jsonDecode(request.body);
+      print(extract);
       if (extract['success'] && request.statusCode == 200) {
         GlobalAlertDialog.show(context, value: 0, msg: extract['message']);
         if (extract['warning_status']) {
@@ -87,8 +89,9 @@ class TransactionProvider with ChangeNotifier {
         GlobalAlertDialog.show(context, value: 1, msg: extract['message']);
       }
     } catch (e) {
+      print(e);
       ScaffoldMessenger.of(context)
-          .showSnackBar(CustomSnackBar("Request timeout!! try again!"));
+          .showSnackBar(CustomSnackBar("Request timeout!! try again!$e"));
     }
   }
 
