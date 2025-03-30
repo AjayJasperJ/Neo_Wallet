@@ -30,7 +30,7 @@ class PaymentchatScreen extends StatefulWidget {
 }
 
 class _PaymentchatScreenState extends State<PaymentchatScreen> {
-  DateTime? lastDisplayedTime; // Track last shown timestamp
+  DateTime? lastDisplayedTime;
   final ScrollController _scrollController = ScrollController();
 
   @override
@@ -140,12 +140,8 @@ class _PaymentchatScreenState extends State<PaymentchatScreen> {
                               final chatItem =
                                   chatDataprovider.fetchchatdetail[index];
                               bool isSender = chatItem.mode == 'sent';
-
-                              // Parse the current transaction date
                               DateTime currentTransactionTime =
                                   DateTime.parse(chatItem.created_at);
-
-                              // Show time separator if it's the first message OR the next hour starts
                               bool showTimeSeparator = false;
                               if (lastDisplayedTime == null ||
                                   currentTransactionTime
@@ -156,12 +152,11 @@ class _PaymentchatScreenState extends State<PaymentchatScreen> {
                                       lastDisplayedTime!.day) {
                                 showTimeSeparator = true;
                                 lastDisplayedTime =
-                                    currentTransactionTime; // Update last shown time
+                                    currentTransactionTime;
                               }
-
                               return Column(
                                 children: [
-                                  if (showTimeSeparator) // Show separator when needed
+                                  if (showTimeSeparator)
                                     Padding(
                                       padding: EdgeInsets.symmetric(
                                           vertical: displaysize.height * .02),

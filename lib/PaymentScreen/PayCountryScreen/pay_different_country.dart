@@ -125,7 +125,7 @@ class _PayDifferentCountryState extends State<PayDifferentCountry> {
                                 if (_controller.text ==
                                     '${widget.sender_country[5]}0.00') {
                                   _controller.text =
-                                      '${widget.sender_country[5]}'; // Clear "0.00" but keep "${widget.sender_country[5]}"
+                                      '${widget.sender_country[5]}';
                                   _controller.selection =
                                       TextSelection.fromPosition(
                                     TextPosition(
@@ -140,11 +140,9 @@ class _PayDifferentCountryState extends State<PayDifferentCountry> {
                                 String oneInrTarget =
                                     countryProvider.receiver_country[7];
 
-                                // Ensure the input starts with the correct currency symbol
                                 if (!value.startsWith(currencySymbol)) {
                                   _controller.text = currencySymbol;
                                 } else {
-                                  // Extract numeric part
                                   String numericPart =
                                       value.substring(currencySymbol.length);
                                   RegExp numberRegExp = RegExp(r'^[\d,.]*$');
@@ -168,18 +166,18 @@ class _PayDifferentCountryState extends State<PayDifferentCountry> {
                                 if (_controller.text.trim() ==
                                     '${widget.sender_country[5]}') {
                                   _controller.text =
-                                      '${widget.sender_country[5]}0.00'; // Restore if empty
+                                      '${widget.sender_country[5]}0.00';
                                 }
                               },
                               textInputAction:
-                                  TextInputAction.done, // Set Enter key action
+                                  TextInputAction.done,
 
                               onFieldSubmitted: (value) {
                                 if (_focusNode.hasFocus) {
-                                  _focusNode.unfocus(); // Hide the keyboard
+                                  _focusNode.unfocus();
                                 } else {
                                   FocusScope.of(context).requestFocus(
-                                      _focusNode); // Show the keyboard
+                                      _focusNode);
                                 }
                               },
                               keyboardType: TextInputType.number,

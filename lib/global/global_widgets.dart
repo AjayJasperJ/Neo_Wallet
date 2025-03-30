@@ -1,5 +1,4 @@
 import 'dart:async';
-
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:lottie/lottie.dart';
@@ -359,58 +358,6 @@ String GetFullAlphabeticMonth(int month) {
   ];
   return months[month - 1];
 }
-
-List<Map<String, dynamic>> transactions = [
-  {
-    "sender": "Alice",
-    "receiver": "Abitha A",
-    "amount": 50.0,
-    "status": true,
-    "date": DateTime(2025, 2, 25, 14, 13, 15, 500)
-  },
-  {
-    "sender": "Abitha A",
-    "receiver": "Alice",
-    "amount": 100.0,
-    "status": false,
-    "date": DateTime(2025, 2, 24, 9, 44, 10, 200)
-  },
-  {
-    "sender": "Abitha A",
-    "receiver": "Alice",
-    "amount": 100.0,
-    "status": true,
-    "date": DateTime(2025, 2, 24, 9, 45, 10, 200)
-  },
-  {
-    "sender": "Alice",
-    "receiver": "Abitha A",
-    "amount": 120.0,
-    "status": false,
-    "date": DateTime(2025, 2, 22, 12, 5, 49, 300)
-  },
-  {
-    "sender": "Alice",
-    "receiver": "Abitha A",
-    "amount": 75.5,
-    "status": true,
-    "date": DateTime(2025, 2, 23, 18, 10, 30, 800)
-  },
-  {
-    "sender": "Alice",
-    "receiver": "Abitha A",
-    "amount": 120.0,
-    "status": true,
-    "date": DateTime(2025, 2, 22, 12, 5, 50, 300)
-  },
-  {
-    "sender": "Abitha A",
-    "receiver": "Alice",
-    "amount": 90.0,
-    "status": true,
-    "date": DateTime(2025, 2, 22, 16, 25, 40, 600)
-  },
-];
 
 SnackBar CustomSnackBar(String textdata) {
   return SnackBar(

@@ -182,8 +182,6 @@ class _ExpandableItemState extends State<ExpandableItem>
             ),
           ),
         ),
-
-        /// **Fix: Using AnimatedSize for smooth expansion**
         AnimatedSize(
           duration: Duration(milliseconds: 400),
           curve: Curves.easeInOut,
@@ -216,7 +214,7 @@ class _ExpandableItemState extends State<ExpandableItem>
                         )),
                   ),
                 )
-              : SizedBox(), // Prevents size glitch
+              : SizedBox(), 
         ),
       ],
     );

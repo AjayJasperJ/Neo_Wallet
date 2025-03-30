@@ -16,7 +16,7 @@ class ImageSourceSheet extends StatelessWidget {
     final displaysize = MediaQuery.of(context).size;
 
     return Container(
-      height: displaysize.height * 0.25, // Increased height
+      height: displaysize.height * 0.25,
       padding: EdgeInsets.symmetric(
         horizontal: displaysize.width * .04,
         vertical: displaysize.height * .02,
@@ -82,7 +82,7 @@ class FilePickerSheet extends StatelessWidget {
       'png',
       'jpg',
       'jpeg'
-    ], // Allowed file types
+    ],
   }) : super(key: key);
 
   Future<void> _pickFile(BuildContext context) async {
@@ -94,12 +94,12 @@ class FilePickerSheet extends StatelessWidget {
 
       if (result != null && result.files.single.path != null) {
         File file = File(result.files.single.path!);
-        onFilePicked(file); // Send file to parent widget
+        onFilePicked(file);
       }
     } catch (e) {
       print("Error picking file: $e");
     }
-    Navigator.pop(context); // Close Bottom Sheet
+    Navigator.pop(context);
   }
 
   @override
@@ -107,7 +107,7 @@ class FilePickerSheet extends StatelessWidget {
     final displaysize = MediaQuery.of(context).size;
 
     return Container(
-      height: displaysize.height * 0.18, // Set height
+      height: displaysize.height * 0.18, 
       padding: EdgeInsets.symmetric(
         horizontal: displaysize.width * .04,
         vertical: displaysize.height * .02,

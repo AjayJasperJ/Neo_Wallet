@@ -28,16 +28,14 @@ class _PaymentmethodScreenState extends State<PaymentmethodScreen> {
             child: SingleChildScrollView(
               child: ConstrainedBox(
                 constraints: BoxConstraints(
-                  minHeight: constraints.maxHeight, // Ensures full height
+                  minHeight: constraints.maxHeight,
                 ),
                 child: Column(
                   children: [
-                    // ✅ Fixed Height Container
                     Container(
                       height: displaysize.height * .33,
                       width: displaysize.width,
                       child: Padding(
-                        //fixed sized
                         padding: EdgeInsets.symmetric(
                             horizontal: displaysize.width * .04),
                         child: Column(
@@ -112,8 +110,6 @@ class _PaymentmethodScreenState extends State<PaymentmethodScreen> {
                         ),
                       ),
                     ),
-
-                    // ✅ Flexible Growing Container
                     LayoutBuilder(
                       builder: (context, boxConstraints) {
                         return Container(
@@ -127,7 +123,7 @@ class _PaymentmethodScreenState extends State<PaymentmethodScreen> {
                           constraints: BoxConstraints(
                               minHeight: constraints.maxHeight -
                                   displaysize.height * .33,
-                              minWidth: constraints.maxWidth // Remaining space
+                              minWidth: constraints.maxWidth
                               ),
                           child: Padding(
                             padding: EdgeInsets.symmetric(
@@ -149,10 +145,10 @@ class _PaymentmethodScreenState extends State<PaymentmethodScreen> {
                                 ),
                                 MediaQuery.removePadding(
                                   context: context,
-                                  removeTop: true, // Removes top padding
-                                  removeBottom: true, // Removes bottom padding
-                                  removeLeft: true, // Removes left padding
-                                  removeRight: true, // Removes right padding
+                                  removeTop: true,
+                                  removeBottom: true,
+                                  removeLeft: true,
+                                  removeRight: true, 
                                   child: ListView.builder(
                                     itemCount: _payment_method_datas.length,
                                     shrinkWrap: true,

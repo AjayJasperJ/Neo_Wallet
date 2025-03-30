@@ -81,11 +81,8 @@ class _RegisterAddDataState extends State<RegisterAddData> {
                   )));
     }
   }
-
-//store image & file path
   File? _profileImage;
   File? _identityDoc;
-//select image
   final ImagePicker _picker = ImagePicker();
   void _showImageSourceSheet() {
     showModalBottomSheet(

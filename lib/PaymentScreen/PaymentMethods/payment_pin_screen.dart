@@ -58,8 +58,6 @@ class _PaymentPinScreenState extends State<PaymentPinScreen> {
                                 decoration: BoxDecoration(
                                   borderRadius: BorderRadius.circular(
                                       displaysize.height / 4),
-                                  // image: DecorationImage(
-                                  //     image: AssetImage(image_person1))
                                 ),
                               ),
                               SizedBox(

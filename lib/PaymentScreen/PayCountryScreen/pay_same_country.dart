@@ -129,14 +129,14 @@ class _PaySameCountryState extends State<PaySameCountry> {
                             }
                           },
                           textInputAction:
-                              TextInputAction.done, // Set Enter key action
+                              TextInputAction.done,
 
                           onFieldSubmitted: (value) {
                             if (_focusNode.hasFocus) {
-                              _focusNode.unfocus(); // Hide the keyboard
+                              _focusNode.unfocus();
                             } else {
                               FocusScope.of(context).requestFocus(
-                                  _focusNode); // Show the keyboard
+                                  _focusNode);
                             }
                           },
                           keyboardType: TextInputType.number,
@@ -188,7 +188,6 @@ class _PaySameCountryState extends State<PaySameCountry> {
                                 isExpanded: true,
                                 onChanged: (String? newValue) {
                                   setState(() {
-                                    // Find the selected model instance by matching the category name
                                     final selectedType = financialfoalProvider
                                         .categorieslist
                                         .firstWhere((type) =>
@@ -203,7 +202,7 @@ class _PaySameCountryState extends State<PaySameCountry> {
                                     .map((type) {
                                   return DropdownMenuItem<String>(
                                     value:
-                                        type.category_name, // Keep name visible
+                                        type.category_name, 
                                     child: Text(
                                       type.category_name,
                                       style: CustomTextStyler().styler(

@@ -51,11 +51,10 @@ class _AccountScreenState extends State<AccountScreen> {
             child: SingleChildScrollView(
               child: ConstrainedBox(
                 constraints: BoxConstraints(
-                  minHeight: constraints.maxHeight, // Ensures full height
+                  minHeight: constraints.maxHeight,
                 ),
                 child: Column(
                   children: [
-                    // ✅ Fixed Height Container
                     Container(
                         height: displaysize.height * .45,
                         width: displaysize.width,
@@ -88,8 +87,6 @@ class _AccountScreenState extends State<AccountScreen> {
                             ],
                           ),
                         )),
-
-                    // ✅ Flexible Growing Container
                     LayoutBuilder(
                       builder: (context, boxConstraints) {
                         return Container(
@@ -121,10 +118,10 @@ class _AccountScreenState extends State<AccountScreen> {
                                 ),
                                 MediaQuery.removePadding(
                                   context: context,
-                                  removeTop: true, // Removes top padding
-                                  removeBottom: true, // Removes bottom padding
-                                  removeLeft: true, // Removes left padding
-                                  removeRight: true, // Removes right padding
+                                  removeTop: true,
+                                  removeBottom: true,
+                                  removeLeft: true,
+                                  removeRight: true,
                                   child: ListView.builder(
                                     itemCount: 4,
                                     shrinkWrap: true,

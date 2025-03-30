@@ -135,8 +135,6 @@ class _SelectCountryState extends State<SelectCountry> {
     );
   }
 }
-
-// Updated function to display dynamic country names and flags
 Row _countryFormat(BuildContext context, String countryName, String imagePath,
     {bool selected = false}) {
   return Row(

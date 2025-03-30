@@ -48,7 +48,7 @@ class _PayCountryShimmerState extends State<PayCountryShimmer> {
   @override
   Widget build(BuildContext context) {
     if (isLoading) {
-      return FakePayCountry(); // Show loading state
+      return FakePayCountry();
     }
 
     final countryProvider = Provider.of<CountryProvider>(context);

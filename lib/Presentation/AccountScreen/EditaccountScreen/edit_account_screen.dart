@@ -133,16 +133,14 @@ class _EditAccountScreenState extends State<EditAccountScreen> {
               child: SingleChildScrollView(
                 child: ConstrainedBox(
                   constraints: BoxConstraints(
-                    minHeight: constraints.maxHeight, // Ensures full height
+                    minHeight: constraints.maxHeight,
                   ),
                   child: Column(
                     children: [
-                      // ✅ Fixed Height Container
                       Container(
                         height: displaysize.height * .4,
                         width: displaysize.width,
                         child: Padding(
-                          //fixed sized
                           padding: EdgeInsets.only(
                               right: displaysize.width * .04,
                               left: displaysize.width * .04),
@@ -156,7 +154,6 @@ class _EditAccountScreenState extends State<EditAccountScreen> {
                                 child: Column(
                                   mainAxisAlignment: MainAxisAlignment.center,
                                   children: [
-                                    //content
                                     Stack(
                                       children: [
                                         Container(
@@ -202,8 +199,6 @@ class _EditAccountScreenState extends State<EditAccountScreen> {
                           ),
                         ),
                       ),
-
-                      // ✅ Flexible Growing Container
                       LayoutBuilder(
                         builder: (context, boxConstraints) {
                           return Container(
@@ -218,7 +213,7 @@ class _EditAccountScreenState extends State<EditAccountScreen> {
                                 minHeight: constraints.maxHeight -
                                     displaysize.height * .4,
                                 minWidth:
-                                    constraints.maxWidth // Remaining space
+                                    constraints.maxWidth 
                                 ),
                             child: Padding(
                               padding: EdgeInsets.symmetric(

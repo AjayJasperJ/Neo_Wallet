@@ -111,14 +111,13 @@ class _FakeNavigatorbarState extends State<FakeNavigatorbar> {
           child: ConstrainedBox(
             constraints: BoxConstraints(
               minHeight:
-                  MediaQuery.of(context).size.height, // Set height constraint
+                  MediaQuery.of(context).size.height,
             ),
             child: IntrinsicHeight(
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Expanded(
-                    // ✅ Added to prevent infinite height issue
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [

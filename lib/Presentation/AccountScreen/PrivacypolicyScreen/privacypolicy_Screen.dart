@@ -23,16 +23,14 @@ class _PrivacypolicyScreenState extends State<PrivacypolicyScreen> {
             child: SingleChildScrollView(
               child: ConstrainedBox(
                 constraints: BoxConstraints(
-                  minHeight: constraints.maxHeight, // Ensures full height
+                  minHeight: constraints.maxHeight,
                 ),
                 child: Column(
                   children: [
-                    // ✅ Fixed Height Container
                     Container(
                       height: displaysize.height * .2,
                       width: displaysize.width,
                       child: Padding(
-                        //fixed sized
                         padding: EdgeInsets.symmetric(
                             horizontal: displaysize.width * .04),
                         child: Column(
@@ -45,8 +43,6 @@ class _PrivacypolicyScreenState extends State<PrivacypolicyScreen> {
                         ),
                       ),
                     ),
-
-                    // ✅ Flexible Growing Container
                     LayoutBuilder(
                       builder: (context, boxConstraints) {
                         return Container(
@@ -60,7 +56,7 @@ class _PrivacypolicyScreenState extends State<PrivacypolicyScreen> {
                           constraints: BoxConstraints(
                               minHeight: constraints.maxHeight -
                                   displaysize.height * .2,
-                              minWidth: constraints.maxWidth // Remaining space
+                              minWidth: constraints.maxWidth 
                               ),
                           child: Padding(
                             padding: EdgeInsets.symmetric(

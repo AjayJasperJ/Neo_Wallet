@@ -86,7 +86,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 SizedBox(height: displaysize.height * .04),
                 TextFormField(
                   textInputAction: TextInputAction.done,
-                  controller: _contactController, // Attach controller
+                  controller: _contactController, 
                   keyboardType: TextInputType.number,
                   inputFormatters: [
                     FilteringTextInputFormatter.digitsOnly,
