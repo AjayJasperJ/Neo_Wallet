@@ -1,4 +1,4 @@
-name: Flutter Release APK
+name: Flutter CI
 
 on:
   push:
@@ -19,20 +19,22 @@ jobs:
         with:
           flutter-version: 'stable'
 
+      - name: Display Flutter version
+        run: flutter --version
+
       - name: Install dependencies
         run: flutter pub get
 
       - name: Analyze code
         run: flutter analyze
 
-      # Optional: run tests if any are present in the test/ directory
       - name: Run tests
         run: flutter test
 
       - name: Build release APK
         run: flutter build apk --release
 
-      - name: Upload APK Artifact
+      - name: Upload APK
         uses: actions/upload-artifact@v4
         with:
           name: release-apk
