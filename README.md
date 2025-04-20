@@ -5,4 +5,5 @@ The system ensures secure financial management with Ai-powered user verification
 Reuirements:
 
 - java 21
-- flutter 3.27
+- flutter 3.27.4
+- dart 3.6.2
